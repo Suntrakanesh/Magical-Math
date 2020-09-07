@@ -7,10 +7,11 @@ void main()
 {
 int gd=DETECT,gm,a,b,num,result;
 char ans[3];
-initgraph(&gd,&gm,"c:\\Turboc3\\bgi");
+initgraph(&gd,&gm,"c:\\Turboc3\\bgi"); //initiate the graphics mode
 a=getmaxx()/5;
 b=getmaxy()/2;
-setbkcolor(GREEN);
+  
+setbkcolor(GREEN);//set the background color
 settextstyle(0,0,4);
 outtextxy(a,b,"\2 Magic Math \2");
 delay(1000);
@@ -20,6 +21,9 @@ outtextxy(a/2,b,"* Read the instruction carefully *");
 delay(1000);
 cleardevice();
 settextstyle(0,0,1);
+  
+//Instructions to play the magic
+  
 outtextxy(50,50,"1.Assume any three digit number");
 outtextxy(50,75,"2.Make sure the last number is less than first number");
 outtextxy(50,100,"3.Reverse the assumed number");
@@ -30,12 +34,13 @@ outtextxy(50,200,"6.You need to enter the last digit of your answer alone");
 outtextxy(60,225,"(Eg. Here 7 is the last digit in 297 )");
 outtextxy(100,250,"Click Enter key,when you red out it..");
 getch();
+  
 cleardevice();
 outtextxy(a,100,"Enter the last digit of your answer..");
-scanf("%d",&num);
+scanf("%d",&num);//get the data from player
 cleardevice();
 settextstyle(0,0,3);
-result=num+90+(9-num)*100;
+result=num+90+(9-num)*100;//mathematical calculation to find the answer
 outtextxy(a,b,"Hurray!We got it");
 outtextxy(a,b+30,"Your answer is");
 itoa(result,ans,10);
